@@ -1,12 +1,12 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Happy Birthday Sunu! ðŸŽ</title>
+<title>Happy Birthday Sunu! 🎁</title>
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:type" content="website">
-<meta property="og:title" content="ðŸŽ‚ Happy Birthday, Sunu!">
+<meta property="og:title" content="🎂 Happy Birthday, Sunu!">
 <meta property="og:description" content="Tap to open. Warning: contains shopping.">
 <!-- After publishing, replace with your full URL, e.g. https://kishorid07.github.io/happy-birthday/preview.png -->
 <meta property="og:image" content="https://kishorid07.github.io/happy-birthday/preview.png">
@@ -30,7 +30,7 @@
     animation: wiggle 1.6s ease-in-out infinite;
   }
   .lid::before { content:""; position:absolute; left:50%; top:0; width:30px; height:100%; margin-left:-15px; background:var(--ribbon); }
-  .lid::after { content:"ðŸŽ€"; position:absolute; left:50%; top:-26px; transform:translateX(-50%); font-size:34px; }
+  .lid::after { content:"🎀"; position:absolute; left:50%; top:-26px; transform:translateX(-50%); font-size:34px; }
   .open .lid { animation:none; transform:translate(95px,-45px) rotate(32deg); }
   @keyframes wiggle { 0%,100%{transform:rotate(-1.5deg)} 50%{transform:rotate(1.5deg)} }
   .hint { font-size:.95rem; opacity:.8; transition:opacity .4s; }
@@ -56,18 +56,18 @@
 </style>
 </head>
 <body>
-  <h1>Happy Birthday, Sunu! ðŸŽ‰</h1>
+  <h1>Happy Birthday, Sunu! 🎉</h1>
   <p class="sub">A box has arrived. It is not a bomb. Probably.</p>
 
   <div class="scene" id="scene" role="button" aria-label="Open the gift box" tabindex="0">
     <div class="lid"></div>
     <div class="box"></div>
   </div>
-  <div class="hint" id="hint">ðŸ‘† Tap the box</div>
+  <div class="hint" id="hint">👆 Tap the box</div>
 
   <div class="card" id="card">
     <div id="lock">
-      <p class="msg">Only the birthday girl may enter. Whisper the magic word ðŸ¤«</p>
+      <p class="msg">Only the birthday girl may enter. Whisper the magic word 🤫</p>
       <input id="pw" type="password" placeholder="magic word" autocomplete="off" autocapitalize="none">
       <p class="err" id="err"></p>
       <button id="go">Unlock my gift</button>
@@ -75,26 +75,26 @@
 
     <div id="reveal" class="hidden">
       <p class="msg">
-        Sunu, this year is going to tick off <b>every single item on your vision board</b> âœ¨<br>
-        Fair warning: the universe has seen the list and is already sweating. ðŸ˜„
+        Sunu, this year is going to tick off <b>every single item on your vision board</b> ✨<br>
+        Fair warning: the universe has seen the list and is already sweating. 😄
       </p>
-      <div class="amt">â‚¹5,000 ðŸ›ï¸</div>
+      <div class="amt">₹5,000 🛍️</div>
       <div>Myntra E-Gift Voucher</div>
       <div class="row"><div><div class="label">Voucher code</div><b id="code"></b></div><button class="small" data-copy="code">Copy</button></div>
       <div class="row"><div><div class="label">PIN</div><b id="pin"></b></div><button class="small" data-copy="pin">Copy</button></div>
       <p class="label" id="expiry"></p>
-      <a href="https://www.myntra.com/" target="_blank" rel="noopener"><button>Go shopping ðŸ›’</button></a>
-      <p class="msg" style="margin-top:14px">Love you. Please buy something fabulous. ðŸ’–</p>
+      <a href="https://www.myntra.com/" target="_blank" rel="noopener"><button>Go shopping 🛒</button></a>
+      <p class="msg" style="margin-top:14px">Love you. Please buy something fabulous. 💖</p>
     </div>
   </div>
 
-<script src="data.js?v=2"></script>
+<script src="data.js"></script>
 <script>
 const $ = id => document.getElementById(id);
 const b64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
 
 function confetti() {
-  const e = ["ðŸŽ‰","ðŸŽŠ","âœ¨","ðŸ’–","ðŸŽ","ðŸŽˆ"];
+  const e = ["🎉","🎊","✨","💖","🎁","🎈"];
   for (let i = 0; i < 40; i++) {
     const s = document.createElement("span");
     s.className = "conf"; s.textContent = e[i % e.length];
@@ -132,7 +132,7 @@ async function unlock() {
     $("lock").classList.add("hidden"); $("reveal").classList.remove("hidden");
     confetti();
   } catch (e) {
-    $("err").textContent = "Hmm, that's not it. Are you even Sunu? ðŸ§";
+    $("err").textContent = "Hmm, that's not it. Are you even Sunu? 🧐";
   }
 }
 $("go").addEventListener("click", unlock);
